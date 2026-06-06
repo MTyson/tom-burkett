@@ -3,10 +3,180 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Y Home Inspection Detective</title>
+    <title>Thomas Ray Burkett Jr | NOCO Home Inspection Detective</title>
+    <style>
+        /* Base Reset & Typography */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: #333; line-height: 1.6; background-color: #fcfcfc; }
+        
+        /* Header & Navigation */
+        header { background: #000; color: #fff; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; }
+        .logo-text { font-size: 1.1rem; font-weight: bold; letter-spacing: 0.5px; }
+        .logo-text span { display: block; font-size: 0.8rem; font-weight: normal; color: #ccc; }
+        nav a { color: #fff; text-decoration: none; margin-left: 20px; font-size: 0.9rem; }
+        nav a:hover { color: #3b82f6; }
+        .phone-nav { color: #fff; font-weight: bold; text-decoration: none; font-size: 1.1rem; }
+
+        /* Hero Section */
+        .hero { background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover; padding: 120px 5%; text-align: center; color: #fff; }
+        .hero h1 { font-size: 3rem; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 1px; line-height: 1.2; }
+        .hero .tagline { font-size: 1.8rem; font-weight: 300; margin-bottom: 25px; }
+        .hero .phone-hero { font-size: 2.2rem; display: block; margin-bottom: 30px; font-weight: bold; color: #fff; text-decoration: none; }
+        .cta-btn { display: inline-block; background-color: #2563eb; color: white; padding: 14px 28px; text-decoration: none; border-radius: 5px; font-weight: bold; transition: background 0.2s; font-size: 1.1rem; }
+        .cta-btn:hover { background-color: #1d4ed8; }
+
+        /* Guarantee Bar */
+        .guarantee-bar { background-color: #1e3a8a; color: white; text-align: center; padding: 15px; font-weight: bold; letter-spacing: 0.5px; }
+
+        /* Services Grid Section */
+        .services-section { padding: 60px 5%; max-width: 1200px; margin: 0 auto; }
+        .services-section h2 { text-align: center; margin-bottom: 40px; font-size: 2rem; position: relative; padding-bottom: 10px; }
+        .services-section h2::after { content: ''; display: block; width: 50px; height: 3px; background: #2563eb; margin: 10px auto 0; }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; }
+        
+        .service-card { border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); background: #fff; padding: 40px 25px; text-align: center; display: flex; flex-direction: column; justify-content: space-between; border-top: 5px solid #ddd; }
+        .service-card.radon { border-top-color: #facc15; }
+        .service-card.sewer { border-top-color: #9ca3af; }
+        .service-card.moisture { border-top-color: #22d3ee; }
+        .service-card.mold { border-top-color: #34d399; }
+        
+        .service-icon { font-size: 3rem; margin-bottom: 15px; display: block; }
+        .service-card h3 { font-size: 1.3rem; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 0.5px; }
+        .service-card p { font-size: 0.95rem; color: #555; margin-bottom: 20px; flex-grow: 1; }
+        .service-card a { color: #2563eb; text-decoration: none; font-weight: bold; font-size: 0.9rem; }
+        .service-card a:hover { text-decoration: underline; }
+
+        /* Testimonials Section */
+        .testimonials-section { background-color: #f3f4f6; padding: 60px 5%; }
+        .testimonials-container { max-width: 1100px; margin: 0 auto; }
+        .testimonials-section h2 { text-align: center; margin-bottom: 40px; font-size: 2rem; }
+        .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .testimonial-card { background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); position: relative; }
+        .testimonial-card::before { content: "“"; font-size: 4rem; color: #e5e7eb; position: absolute; top: -10px; left: 15px; font-family: Georgia, serif; }
+        .testimonial-text { font-style: italic; color: #4b5563; margin-bottom: 15px; position: relative; z-index: 1; font-size: 0.95rem; }
+        .testimonial-author { font-weight: bold; text-align: right; color: #1f2937; font-size: 0.9rem; }
+
+        /* Footer */
+        footer { background: #111; color: #aaa; text-align: center; padding: 30px; font-size: 0.85rem; }
+        
+        /* Mobile Optimization */
+        @media (max-width: 768px) {
+            header { flex-direction: column; gap: 10px; text-align: center; }
+            nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+            nav a { margin: 0 10px; }
+            .hero h1 { font-size: 2rem; }
+            .hero .tagline { font-size: 1.3rem; }
+            .hero .phone-hero { font-size: 1.8rem; }
+        }
+    </style>
 </head>
 <body>
-    <h1>Site Coming Soon</h1>
-    <p>Professional Home Inspections</p>
+
+    <header>
+        <div class="logo-text">
+            NOCO HOME INSPECTION DETECTIVE
+            <span>The eye that looks beyond.</span>
+        </div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Services</a>
+            <a href="#">About</a>
+            <a class="phone-nav" href="tel:9706727631">970-672-7631</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Thomas Ray Burkett Jr</h1>
+        <div class="tagline">Residential and Commercial Inspections</div>
+        <a class="phone-hero" href="tel:9706727631">970-672-7631</a>
+        <div>
+            <a href="tel:9706727631" class="cta-btn">Click to Schedule Online</a>
+        </div>
+    </section>
+
+    <div class="guarantee-bar">
+        ★ $10,000 HONOR GUARANTEE backed by InterNACHI ★
+    </div>
+
+    <section class="services-section">
+        <h2>Additional Services</h2>
+        <div class="services-grid">
+            
+            <!-- Radon Inspection -->
+            <div class="service-card radon">
+                <div>
+                    <span class="service-icon">☢️</span>
+                    <h3>Radon Inspection</h3>
+                    <p>Radon is a cancer-causing radioactive gas that you cannot smell or see, and it tends to hide in basements and crawl spaces.</p>
+                </div>
+                <a href="#">Read More about Radon Gas &gt;</a>
+            </div>
+
+            <!-- Sewer Scope -->
+            <div class="service-card sewer">
+                <div>
+                    <span class="service-icon">🕳️</span>
+                    <h3>Sewer Scope</h3>
+                    <p>Ever bought a house just to find out the plumbing doesn't work or an awful stench lurks in the bathroom? A sewer scope gives you peace of mind.</p>
+                </div>
+                <a href="#">Read More about Sewer Scopes &gt;</a>
+            </div>
+
+            <!-- Moisture Testing -->
+            <div class="service-card moisture">
+                <div>
+                    <span class="service-icon">⏱️</span>
+                    <h3>Moisture Testing</h3>
+                    <p>Moisture buildup can lead to mold, structural damage, and bacteria growth. Make sure your home isn't a breeding ground for these costly problems.</p>
+                </div>
+                <a href="#">Read More about Moisture Testing &gt;</a>
+            </div>
+
+            <!-- Mold Inspection -->
+            <div class="service-card mold">
+                <div>
+                    <span class="service-icon">🏠</span>
+                    <h3>Mold Inspection</h3>
+                    <p>Mold can grow almost anywhere, especially behind walls and under floors; it can also be toxic. Checking for mold just in case keeps your family safe.</p>
+                </div>
+                <a href="#">Read More about Mold &gt;</a>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="testimonials-section">
+        <div class="testimonials-container">
+            <h2>Happy Customers</h2>
+            <div class="testimonials-grid">
+                
+                <div class="testimonial-card">
+                    <p class="testimonial-text">Very thorough and detailed. Answered all my questions and documented all concerns with knowledge and experience. Very highly recommended.</p>
+                    <p class="testimonial-author">- Lisa S.</p>
+                </div>
+
+                <div class="testimonial-card">
+                    <p class="testimonial-text">There are numerous inspectors to contact for your needs, but none is as professional and proficient as Tom and NOCO Home Inspection Detective. His work is methodical, thorough, and indicative of a true professional.</p>
+                    <p class="testimonial-author">- Adam J.</p>
+                </div>
+
+                <div class="testimonial-card">
+                    <p class="testimonial-text">Tom's wealth of knowledge and experience with regards to the unique needs of mobile home inspections and repairs inspired trust within me to select his expertise in home inspections. I was in a time crunch and Tom made allowance to fit me in to his busy schedule. His professionalism was apparent upon the first handshake to the completed delivery of the inspection report. I look forward with confidence to select him for my future repairs and consultations for my mobile home.</p>
+                    <p class="testimonial-author">- Terri B.</p>
+                </div>
+
+                <div class="testimonial-card">
+                    <p class="testimonial-text">Tom inspected a manufactured home I was preparing to purchase. He was very thorough and detailed in his physical inspection as well as in his written report. Tom is very personable and professional and had me meet him at the home to show me and explain his findings. I would absolutely recommend his services.</p>
+                    <p class="testimonial-author">- Stephanie A.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 NOCO Home Inspection Detective. All Rights Reserved.</p>
+    </footer>
+
 </body>
 </html>
