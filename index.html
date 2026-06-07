@@ -59,6 +59,15 @@
             z-index: 1;
         }
 
+        /* Gallery Section */
+        .gallery-section { padding: 60px 5%; max-width: 1200px; margin: 0 auto; background-color: #fcfcfc; }
+        .gallery-section h2 { text-align: center; margin-bottom: 40px; font-size: 2rem; position: relative; padding-bottom: 10px; }
+        .gallery-section h2::after { content: ''; display: block; width: 50px; height: 3px; background: #2563eb; margin: 10px auto 0; }
+        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; }
+        .gallery-item { border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1); height: 200px; }
+        .gallery-item img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.3s; }
+        .gallery-item:hover img { transform: scale(1.05); }
+
         /* Testimonials Section */
         .testimonials-section { background-color: #f3f4f6; padding: 60px 5%; }
         .testimonials-container { max-width: 1100px; margin: 0 auto; }
@@ -93,7 +102,8 @@
         <nav>
             <a href="index.html">Home</a>
             <a href="#services">Services</a>
-            <a href="#about">About</a>
+            <a href="#reviews">Reviews</a>
+            <a href="about.html">About</a>
             <a class="phone-nav" href="tel:9706727631">970-672-7631</a>
         </nav>
     </header>
@@ -158,7 +168,22 @@
         </div>
     </section>
 
-    <section id="about" class="testimonials-section">
+    <section class="gallery-section">
+        <h2>What We Inspect</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item"><img src="images/tom-on-roof.jpg" alt="Roof Inspection"></div>
+            <div class="gallery-item"><img src="images/tom-equipment.jpg" alt="Furnace Inspection"></div>
+            <div class="gallery-item"><img src="images/tom-inspect1.jpg" alt="Water Heater Inspection"></div>
+            <div class="gallery-item"><img src="images/tom-deck.jpg" alt="Deck Inspection"></div>
+            <div class="gallery-item"><img src="images/tom-deck2.jpg" alt="Foundation Inspection"></div>
+            <div class="gallery-item"><img src="images/tom-inspect2.jpg" alt="Electrical Panel Inspection"></div>
+            <div class="gallery-item"><img src="images/tom-meter.jpg" alt="Gas Leak Detection"></div>
+            <div class="gallery-item"><img src="images/tom-gauges.jpg" alt="Sprinkler System Check"></div>
+            <div class="gallery-item"><img src="images/tom-detector.jpg" alt="Safety Detector Testing"></div>
+        </div>
+    </section>
+
+    <section id="reviews" class="testimonials-section">
         <div class="testimonials-container">
             <h2>Happy Customers</h2>
             <div class="testimonials-grid">

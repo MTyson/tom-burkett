@@ -29,9 +29,11 @@
         .content-section li { margin-bottom: 10px; }
 
         /* CTA Box */
-        .cta-box { background: #f3f4f6; padding: 40px; border-radius: 8px; text-align: center; margin-top: 40px; border-left: 5px solid #22d3ee; }
+        .cta-box { background: #f3f4f6; padding: 40px; border-radius: 8px; text-align: center; margin-top: 40px; border-left: 5px solid #22d3ee; clear: both; }
         .cta-btn { display: inline-block; background-color: #0891b2; color: white; padding: 14px 28px; text-decoration: none; border-radius: 5px; font-weight: bold; transition: background 0.2s; font-size: 1.1rem; margin-top: 20px; }
         .cta-btn:hover { background-color: #0e7490; }
+        
+        .service-img { float: right; margin: 0 0 20px 30px; max-width: 350px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
 
         /* Footer */
         footer { background: #111; color: #aaa; text-align: center; padding: 30px; font-size: 0.85rem; }
@@ -42,6 +44,7 @@
             nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
             nav a { margin: 0 10px; }
             .page-header h1 { font-size: 2rem; }
+            .service-img { float: none; margin: 20px auto; display: block; max-width: 100%; }
         }
     </style>
 </head>
@@ -55,7 +58,8 @@
         <nav>
             <a href="index.html">Home</a>
             <a href="index.html#services">Services</a>
-            <a href="index.html#about">About</a>
+            <a href="index.html#reviews">Reviews</a>
+            <a href="about.html">About</a>
             <a class="phone-nav" href="tel:9706727631">970-672-7631</a>
         </nav>
     </header>
@@ -65,6 +69,7 @@
     </section>
 
     <article class="content-section">
+        <img src="images/tom-crawlspace.jpg" alt="Inspecting Crawlspace Vapor Barrier" class="service-img">
         <h2>Protect Your Home from Water Damage</h2>
         <p>Moisture is the single greatest threat to the structural integrity of a home. Undetected leaks or high humidity levels can lead to rot, structural failure, and hazardous mold growth. Professional moisture testing helps identify problems before they become catastrophic and expensive.</p>
         
