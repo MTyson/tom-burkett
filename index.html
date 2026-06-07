@@ -34,17 +34,30 @@
         .services-section h2::after { content: ''; display: block; width: 50px; height: 3px; background: #2563eb; margin: 10px auto 0; }
         .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; }
         
-        .service-card { border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); background: #fff; padding: 40px 25px; text-align: center; display: flex; flex-direction: column; justify-content: space-between; border-top: 5px solid #ddd; }
+        .service-card { border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); background: #fff; padding: 40px 25px; text-align: center; display: flex; flex-direction: column; justify-content: space-between; border-top: 5px solid #ddd; text-decoration: none; color: inherit; transition: transform 0.2s, box-shadow 0.2s; position: relative; }
+        .service-card:hover { transform: translateY(-5px); box-shadow: 0 10px 15px rgba(0,0,0,0.1); cursor: pointer; }
+        
         .service-card.radon { border-top-color: #facc15; }
         .service-card.sewer { border-top-color: #9ca3af; }
         .service-card.moisture { border-top-color: #22d3ee; }
         .service-card.mold { border-top-color: #34d399; }
         
         .service-icon { font-size: 3rem; margin-bottom: 15px; display: block; }
-        .service-card h3 { font-size: 1.3rem; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 0.5px; }
+        .service-card h3 { font-size: 1.3rem; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 0.5px; color: #333; }
         .service-card p { font-size: 0.95rem; color: #555; margin-bottom: 20px; flex-grow: 1; }
-        .service-card a { color: #2563eb; text-decoration: none; font-weight: bold; font-size: 0.9rem; }
-        .service-card a:hover { text-decoration: underline; }
+        .service-card .read-more { color: #2563eb; text-decoration: none; font-weight: bold; font-size: 0.9rem; }
+        .service-card:hover .read-more { text-decoration: underline; }
+        
+        /* This makes the whole card clickable if it contains a link with class 'main-link' */
+        .service-card a.main-link::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 1;
+        }
 
         /* Testimonials Section */
         .testimonials-section { background-color: #f3f4f6; padding: 60px 5%; }
@@ -109,7 +122,7 @@
                     <h3>Radon Inspection</h3>
                     <p>Radon is a cancer-causing radioactive gas that you cannot smell or see, and it tends to hide in basements and crawl spaces.</p>
                 </div>
-                <a href="radon-mitigation.html">Read More about Radon Gas &gt;</a>
+                <a href="radon-mitigation.html" class="main-link read-more">Read More about Radon Gas &gt;</a>
             </div>
 
             <!-- Sewer Scope -->
@@ -119,7 +132,7 @@
                     <h3>Sewer Scope</h3>
                     <p>Ever bought a house just to find out the plumbing doesn't work or an awful stench lurks in the bathroom? A sewer scope gives you peace of mind.</p>
                 </div>
-                <a href="#">Read More about Sewer Scopes &gt;</a>
+                <a href="sewer-scope.html" class="main-link read-more">Read More about Sewer Scopes &gt;</a>
             </div>
 
             <!-- Moisture Testing -->
@@ -129,7 +142,7 @@
                     <h3>Moisture Testing</h3>
                     <p>Moisture buildup can lead to mold, structural damage, and bacteria growth. Make sure your home isn't a breeding ground for these costly problems.</p>
                 </div>
-                <a href="#">Read More about Moisture Testing &gt;</a>
+                <a href="moisture-testing.html" class="main-link read-more">Read More about Moisture Testing &gt;</a>
             </div>
 
             <!-- Mold Inspection -->
@@ -139,7 +152,7 @@
                     <h3>Mold Inspection</h3>
                     <p>Mold can grow almost anywhere, especially behind walls and under floors; it can also be toxic. Checking for mold just in case keeps your family safe.</p>
                 </div>
-                <a href="#">Read More about Mold &gt;</a>
+                <a href="mold-inspection.html" class="main-link read-more">Read More about Mold &gt;</a>
             </div>
 
         </div>
