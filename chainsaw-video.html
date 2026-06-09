@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tom Finishing a Cabin | NOCO Home Inspection Detective</title>
+    <style>
+        /* Base Reset & Typography */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: #333; line-height: 1.6; background-color: #111; color: #eee; }
+        
+        /* Header & Navigation */
+        header { background: #000; color: #fff; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; }
+        .brand-logo-container { display: flex; align-items: center; gap: 12px; }
+        .logo-icon { width: 55px; height: 55px; }
+        .logo-text-stack { display: flex; flex-direction: column; }
+        .text-home-inspection { font-size: 1.2rem; font-weight: bold; color: #fff; margin: 0; letter-spacing: 1px; line-height: 1.1; }
+        .text-detective-divider { font-size: 1rem; color: #84cc16; font-weight: bold; letter-spacing: 2px; }
+        nav a { color: #fff; text-decoration: none; margin-left: 20px; font-size: 0.9rem; }
+        nav a:hover { color: #3b82f6; }
+        .phone-nav { color: #fff; font-weight: bold; text-decoration: none; font-size: 1.1rem; }
+
+        /* Image Container */
+        .video-container { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 60px 5%; min-height: calc(100vh - 160px); }
+        .video-container h1 { margin-bottom: 30px; font-size: 2rem; text-align: center; color: #fff; }
+        
+        .media-content { max-width: 100%; max-height: 70vh; background-color: #000; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        
+        .back-link { margin-top: 30px; display: inline-block; color: #3b82f6; text-decoration: none; font-size: 1.1rem; }
+        .back-link:hover { text-decoration: underline; }
+
+        /* Footer */
+        footer { background: #000; color: #888; text-align: center; padding: 30px; font-size: 0.85rem; }
+        
+        /* Mobile Optimization */
+        @media (max-width: 768px) {
+            header { flex-direction: column; gap: 10px; text-align: center; }
+            nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+            nav a { margin: 0 10px; }
+            .video-container h1 { font-size: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="brand-logo-container">
+            <!-- Reconstructed Vector Detective Emblem -->
+            <svg class="logo-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <!-- Trench Coat Silhouette Base -->
+                <path d="M20,85 C25,65 35,55 50,55 C65,55 75,65 80,85" fill="#2e5b88" stroke="#1e3a5f" stroke-width="2"/>
+                <path d="M32,58 L42,75 L50,62 L58,75 L68,58" fill="#fff" opacity="0.15"/>
+                <!-- Detective Fedora / Hat -->
+                <path d="M25,32 C25,32 30,12 50,12 C70,12 75,32 75,32 L85,36 C85,36 80,40 75,40 L25,40 C20,40 15,36 15,36 Z" fill="#1e3a5f"/>
+                <path d="M26,32 C35,31 65,31 74,32 L75,36 L25,36 Z" fill="#84cc16"/> <!-- Lime Green Hat Band -->
+                <!-- Face/Shadow Area -->
+                <path d="M35,40 C35,48 40,56 50,56 C60,56 65,48 65,40 Z" fill="#111827"/>
+                <!-- Highlighted Magnifying Glass over the Eye -->
+                <circle cx="55" cy="44" r="14" fill="none" stroke="#84cc16" stroke-width="3"/>
+                <line x1="65" x2="78" y1="52" y2="65" stroke="#84cc16" stroke-width="4" stroke-linecap="round"/>
+                <!-- Reflection lines inside glass -->
+                <path d="M46,40 C48,36 54,34 58,36" stroke="#fff" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/>
+            </svg>
+            
+            <!-- Extracted Typography Stack -->
+            <div class="logo-text-stack">
+                <h1 class="text-home-inspection">HOME INSPECTION</h1>
+                <div class="text-detective-divider">
+                    <span>DETECTIVE</span>
+                </div>
+            </div>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="index.html#services">Services</a>
+            <a href="index.html#reviews">Reviews</a>
+            <a href="about.html">About</a>
+            <a class="phone-nav" href="tel:9706727631">970-672-7631</a>
+        </nav>
+    </header>
+
+    <main class="video-container">
+        <h1>Tom Finishing a Cabin with a Chainsaw</h1>
+        
+        <!-- Media Viewer -->
+        <img src="videos/tom-chainsaw.jpg" alt="Tom finishing a cabin with a chainsaw" class="media-content">
+        
+        <a href="about.html" class="back-link">&larr; Back to About Tom</a>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 NOCO Home Inspection Detective. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

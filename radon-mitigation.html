@@ -11,8 +11,12 @@
         
         /* Header & Navigation */
         header { background: #000; color: #fff; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; }
-        .logo-text { font-size: 1.1rem; font-weight: bold; letter-spacing: 0.5px; }
-        .logo-text span { display: block; font-size: 0.8rem; font-weight: normal; color: #ccc; }
+        .brand-logo-container { display: flex; align-items: center; gap: 12px; }
+        .logo-icon { width: 55px; height: 55px; }
+        .logo-text-stack { display: flex; flex-direction: column; }
+        .text-home-inspection { font-size: 1.2rem; font-weight: bold; color: #fff; margin: 0; letter-spacing: 1px; line-height: 1.1; }
+        .text-detective-divider { font-size: 1rem; color: #84cc16; font-weight: bold; letter-spacing: 2px; }
+        .logo-slogan { font-size: 0.9rem; color: #aaa; font-style: italic; letter-spacing: 0.5px; margin-top: 2px; }
         nav a { color: #fff; text-decoration: none; margin-left: 20px; font-size: 0.9rem; }
         nav a:hover { color: #3b82f6; }
         .phone-nav { color: #fff; font-weight: bold; text-decoration: none; font-size: 1.1rem; }
@@ -48,9 +52,31 @@
 <body>
 
     <header>
-        <div class="logo-text">
-            NOCO HOME INSPECTION DETECTIVE
-            <span>The eye that looks beyond.</span>
+        <div class="brand-logo-container">
+            <!-- Reconstructed Vector Detective Emblem -->
+            <svg class="logo-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <!-- Trench Coat Silhouette Base -->
+                <path d="M20,85 C25,65 35,55 50,55 C65,55 75,65 80,85" fill="#2e5b88" stroke="#1e3a5f" stroke-width="2"/>
+                <path d="M32,58 L42,75 L50,62 L58,75 L68,58" fill="#fff" opacity="0.15"/>
+                <!-- Detective Fedora / Hat -->
+                <path d="M25,32 C25,32 30,12 50,12 C70,12 75,32 75,32 L85,36 C85,36 80,40 75,40 L25,40 C20,40 15,36 15,36 Z" fill="#1e3a5f"/>
+                <path d="M26,32 C35,31 65,31 74,32 L75,36 L25,36 Z" fill="#84cc16"/> <!-- Lime Green Hat Band -->
+                <!-- Face/Shadow Area -->
+                <path d="M35,40 C35,48 40,56 50,56 C60,56 65,48 65,40 Z" fill="#111827"/>
+                <!-- Highlighted Magnifying Glass over the Eye -->
+                <circle cx="55" cy="44" r="14" fill="none" stroke="#84cc16" stroke-width="3"/>
+                <line x1="65" x2="78" y1="52" y2="65" stroke="#84cc16" stroke-width="4" stroke-linecap="round"/>
+                <!-- Reflection lines inside glass -->
+                <path d="M46,40 C48,36 54,34 58,36" stroke="#fff" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/>
+            </svg>
+            
+            <!-- Extracted Typography Stack -->
+            <div class="logo-text-stack">
+                <h1 class="text-home-inspection">HOME INSPECTION</h1>
+                <div class="text-detective-divider">
+                    <span>DETECTIVE</span>
+                </div>
+            </div>
         </div>
         <nav>
             <a href="index.html">Home</a>

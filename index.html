@@ -11,8 +11,13 @@
         
         /* Header & Navigation */
         header { background: #000; color: #fff; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; }
-        .logo-text { font-size: 1.1rem; font-weight: bold; letter-spacing: 0.5px; }
-        .logo-text span { display: block; font-size: 0.8rem; font-weight: normal; color: #ccc; }
+        .brand-logo-container { display: flex; align-items: center; gap: 12px; }
+        .logo-icon { width: 55px; height: 55px; }
+        .logo-text-stack { display: flex; flex-direction: column; }
+        .text-home-inspection { font-size: 1.2rem; font-weight: bold; color: #fff; margin: 0; letter-spacing: 1px; line-height: 1.1; }
+        .text-detective-divider { font-size: 1rem; color: #84cc16; font-weight: bold; letter-spacing: 2px; }
+        .logo-slogan { font-size: 0.9rem; color: #aaa; font-style: italic; letter-spacing: 0.5px; margin-top: 2px; }
+        
         nav a { color: #fff; text-decoration: none; margin-left: 20px; font-size: 0.9rem; }
         nav a:hover { color: #3b82f6; }
         .phone-nav { color: #fff; font-weight: bold; text-decoration: none; font-size: 1.1rem; }
@@ -66,9 +71,25 @@
         .gallery-section h2 { text-align: center; margin-bottom: 40px; font-size: 2rem; position: relative; padding-bottom: 10px; }
         .gallery-section h2::after { content: ''; display: block; width: 50px; height: 3px; background: #2563eb; margin: 10px auto 0; }
         .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; }
-        .gallery-item { border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1); height: 200px; }
+        .gallery-item { border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1); height: 200px; cursor: pointer; }
         .gallery-item img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.3s; }
         .gallery-item:hover img { transform: scale(1.05); }
+
+        /* Modal Styles */
+        .modal { display: none; position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.9); flex-direction: column; justify-content: center; align-items: center; }
+        .modal-content { margin: auto; display: block; max-width: 90%; max-height: 80vh; object-fit: contain; border-radius: 8px; }
+        .modal-caption { margin: 15px auto 0; display: block; width: 80%; max-width: 700px; text-align: center; color: #ccc; padding: 10px 0; font-size: 1.2rem; }
+        .modal-close { position: absolute; top: 20px; right: 35px; color: #f1f1f1; font-size: 40px; font-weight: bold; transition: 0.3s; cursor: pointer; z-index: 2001; }
+        .modal-close:hover, .modal-close:focus { color: #bbb; text-decoration: none; cursor: pointer; }
+
+        /* Service Areas Section */
+        .service-areas { background-color: #e5e7eb; padding: 60px 5%; text-align: center; }
+        .service-areas-container { max-width: 1000px; margin: 0 auto; }
+        .service-areas h2 { font-size: 2rem; margin-bottom: 20px; color: #1e3a8a; }
+        .service-areas-intro { font-size: 1.1rem; color: #4b5563; margin-bottom: 30px; }
+        .areas-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; }
+        .area-badge { background: #fff; padding: 12px 20px; border-radius: 30px; font-weight: bold; color: #1f2937; box-shadow: 0 2px 4px rgba(0,0,0,0.05); border: 1px solid #d1d5db; transition: all 0.2s; }
+        .area-badge:hover { background: #2563eb; color: #fff; border-color: #2563eb; transform: translateY(-2px); }
 
         /* Testimonials Section */
         .testimonials-section { background-color: #f3f4f6; padding: 60px 5%; }
@@ -97,9 +118,32 @@
 <body>
 
     <header>
-        <div class="logo-text">
-            NOCO HOME INSPECTION DETECTIVE
-            <span>The eye that looks beyond.</span>
+        <div class="brand-logo-container">
+            <!-- Reconstructed Vector Detective Emblem -->
+            <svg class="logo-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <!-- Trench Coat Silhouette Base -->
+                <path d="M20,85 C25,65 35,55 50,55 C65,55 75,65 80,85" fill="#2e5b88" stroke="#1e3a5f" stroke-width="2"/>
+                <path d="M32,58 L42,75 L50,62 L58,75 L68,58" fill="#fff" opacity="0.15"/>
+                <!-- Detective Fedora / Hat -->
+                <path d="M25,32 C25,32 30,12 50,12 C70,12 75,32 75,32 L85,36 C85,36 80,40 75,40 L25,40 C20,40 15,36 15,36 Z" fill="#1e3a5f"/>
+                <path d="M26,32 C35,31 65,31 74,32 L75,36 L25,36 Z" fill="#84cc16"/> <!-- Lime Green Hat Band -->
+                <!-- Face/Shadow Area -->
+                <path d="M35,40 C35,48 40,56 50,56 C60,56 65,48 65,40 Z" fill="#111827"/>
+                <!-- Highlighted Magnifying Glass over the Eye -->
+                <circle cx="55" cy="44" r="14" fill="none" stroke="#84cc16" stroke-width="3"/>
+                <line x1="65" x2="78" y1="52" y2="65" stroke="#84cc16" stroke-width="4" stroke-linecap="round"/>
+                <!-- Reflection lines inside glass -->
+                <path d="M46,40 C48,36 54,34 58,36" stroke="#fff" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/>
+            </svg>
+            
+            <!-- Extracted Typography Stack -->
+            <div class="logo-text-stack">
+                <h1 class="text-home-inspection">HOME INSPECTION</h1>
+                <div class="text-detective-divider">
+                    <span>DETECTIVE</span>
+                </div>
+                <span class="logo-slogan">The eye that looks beyond.</span>
+            </div>
         </div>
         <nav>
             <a href="index.html">Home</a>
@@ -191,7 +235,7 @@
     </section>
 
     <section class="gallery-section">
-        <h2>What We Inspect</h2>
+        <h2>Tom in Action</h2>
         <div class="gallery-grid">
             <div class="gallery-item"><img src="images/tom-on-roof.jpg" alt="Roof Inspection"></div>
             <div class="gallery-item"><img src="images/tom-equipment.jpg" alt="Furnace Inspection"></div>
@@ -202,6 +246,29 @@
             <div class="gallery-item"><img src="images/tom-meter.jpg" alt="Gas Leak Detection"></div>
             <div class="gallery-item"><img src="images/tom-gauges.jpg" alt="Sprinkler System Check"></div>
             <div class="gallery-item"><img src="images/tom-detector.jpg" alt="Safety Detector Testing"></div>
+        </div>
+    </section>
+
+    <section class="service-areas">
+        <div class="service-areas-container">
+            <h2>Areas We Serve in Southern Colorado</h2>
+            <p class="service-areas-intro">Based in the San Luis Valley and serving surrounding communities across the mountains. Whether you are buying a home in town or a cabin off the grid, NOCO Home Inspection Detective is ready to travel to you.</p>
+            <div class="areas-grid">
+                <div class="area-badge">Alamosa</div>
+                <div class="area-badge">Salida</div>
+                <div class="area-badge">Crestone</div>
+                <div class="area-badge">Pagosa Springs</div>
+                <div class="area-badge">South Fork</div>
+                <div class="area-badge">Creede</div>
+                <div class="area-badge">Del Norte</div>
+                <div class="area-badge">Monte Vista</div>
+                <div class="area-badge">Saguache</div>
+                <div class="area-badge">Moffat</div>
+                <div class="area-badge">Mosca</div>
+                <div class="area-badge">Blanca</div>
+                <div class="area-badge">Manassa</div>
+                <div class="area-badge">La Jara</div>
+            </div>
         </div>
     </section>
 
@@ -238,5 +305,45 @@
         <p>&copy; 2026 NOCO Home Inspection Detective. All Rights Reserved.</p>
     </footer>
 
+    <!-- Image Modal -->
+    <div id="imageModal" class="modal">
+        <span class="modal-close">&times;</span>
+        <img class="modal-content" id="modalImg">
+        <div id="modalCaption" class="modal-caption"></div>
+    </div>
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById("imageModal");
+        var modalImg = document.getElementById("modalImg");
+        var captionText = document.getElementById("modalCaption");
+
+        // Get all images in the gallery
+        var images = document.querySelectorAll('.gallery-item img');
+        
+        // Loop through images and add click event listeners
+        images.forEach(function(img) {
+            img.onclick = function() {
+                modal.style.display = "flex";
+                modalImg.src = this.src;
+                captionText.innerHTML = this.alt;
+            }
+        });
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("modal-close")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() { 
+            modal.style.display = "none";
+        }
+        
+        // Close modal when clicking outside the image
+        modal.onclick = function(e) {
+            if (e.target === modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
 </body>
 </html>
