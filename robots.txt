@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Disallow serverless API endpoints
+Disallow: /api/
+
+Sitemap: https://www.yhomeinspectiondetective.com/sitemap.xml

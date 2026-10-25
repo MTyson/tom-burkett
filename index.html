@@ -4,16 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Inspector in Crestone & Saguache | NOCO Home Inspection Detective</title>
+    <title>Home Inspector in Saguache County, Crestone, Moffat, Alamosa & Salida Area, Colorado | NOCO Home Inspection Detective</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <meta name="description"
-        content="Expert home inspection, radon testing, and sewer scoping in Crestone, Saguache, and the San Luis Valley. Certified and trusted by Thomas Ray Burkett Jr.">
+        content="Expert home inspection, radon testing, and sewer scoping across Saguache County, Crestone, Moffat, Alamosa, and the Salida area, Colorado. Certified and trusted by Thomas Ray Burkett Jr.">
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.yhomeinspectiondetective.com/">
-    <meta property="og:title" content="Expert Home Inspections in Saguache County">
+    <meta property="og:title" content="Expert Home Inspections in Saguache County, Crestone, Moffat, Alamosa & Salida Area, CO">
     <meta property="og:description"
-        content="Buying or selling in Saguache County? NOCO Home Inspection Detective provides expert residential & commercial inspections, radon testing, and sewer scoping.">
-    <meta property="og:image" content="https://www.yhomeinspectiondetective.com/mages/tom-on-roof.jpg">
+        content="Buying or selling in Saguache County, Crestone, Moffat, Alamosa, or the Salida area, Colorado? NOCO Home Inspection Detective provides expert residential & commercial inspections, radon testing, and sewer scoping.">
+    <meta property="og:image" content="https://www.yhomeinspectiondetective.com/images/tom-on-roof.jpg">
     <!-- LocalBusiness Schema -->
     <script type="application/ld+json">
     {
@@ -22,9 +23,13 @@
       "name": "NOCO Home Inspection Detective",
       "telephone": "9706727631",
       "areaServed": [
+        "Saguache County, CO",
         "Crestone, CO",
-        "Saguache, CO",
-        "San Luis Valley, CO"
+        "Moffat, CO",
+        "Alamosa, CO",
+        "Salida area, CO",
+        "San Luis Valley, CO",
+        "Colorado"
       ],
       "founder": "Thomas Ray Burkett Jr"
     }
@@ -724,22 +729,149 @@
             margin: 0 auto;
         }
 
-        /* Error Banner */
-        .contact-error-banner {
-            display: none;
-            background: #fef2f2;
-            border: 1.5px solid #ef4444;
-            border-radius: 8px;
-            padding: 12px 16px;
-            color: #b91c1c;
-            font-size: 0.95rem;
-            font-weight: 600;
-            margin-top: 15px;
+        /* Core Home Inspection Section */
+        .core-inspection-section {
+            padding: 70px 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .core-inspection-section h2 {
             text-align: center;
+            font-size: 2.2rem;
+            color: #111827;
+            margin-bottom: 12px;
+            position: relative;
+            padding-bottom: 12px;
+        }
+
+        .core-inspection-section h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: #2563eb;
+            margin: 12px auto 0;
+        }
+
+        .section-intro-text {
+            text-align: center;
+            max-width: 820px;
+            margin: 0 auto 45px auto;
+            font-size: 1.1rem;
+            color: #4b5563;
+            line-height: 1.7;
+        }
+
+        .core-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+            margin-bottom: 45px;
+        }
+
+        .core-card {
+            background: #ffffff;
+            border-radius: 10px;
+            padding: 28px 22px;
+            border: 1px solid #e5e7eb;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .core-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #1e3a8a, #84cc16);
+        }
+
+        .core-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .core-card-header {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 14px;
+        }
+
+        .core-card-icon {
+            font-size: 1.8rem;
+            background: #f0fdf4;
+            color: #1e3a8a;
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            border: 1px solid #dcfce7;
+            flex-shrink: 0;
+        }
+
+        .core-card h3 {
+            font-size: 1.2rem;
+            color: #111827;
+            font-weight: 700;
+        }
+
+        .core-card p {
+            font-size: 0.92rem;
+            color: #4b5563;
+            line-height: 1.6;
+        }
+
+        .inspection-deliverables-banner {
+            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+            color: #ffffff;
+            border-radius: 12px;
+            padding: 40px 30px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 30px;
+            box-shadow: 0 10px 25px rgba(30, 58, 138, 0.2);
+            margin-top: 35px;
+        }
+
+        .deliverable-item {
+            display: flex;
+            gap: 15px;
+            align-items: flex-start;
+        }
+
+        .deliverable-icon {
+            font-size: 2.2rem;
+            flex-shrink: 0;
+        }
+
+        .deliverable-item h4 {
+            font-size: 1.15rem;
+            margin-bottom: 6px;
+            color: #ffffff;
+        }
+
+        .deliverable-item p {
+            font-size: 0.9rem;
+            color: #e0e7ff;
+            line-height: 1.5;
         }
 
         /* Mobile Optimization */
         @media (max-width: 768px) {
+            .inspection-deliverables-banner {
+                grid-template-columns: 1fr;
+                padding: 30px 20px;
+            }
             header {
                 flex-direction: column;
                 gap: 10px;
@@ -821,7 +953,8 @@
         </div>
         <nav>
             <a href="index.html">Home</a>
-            <a href="#services">Services</a>
+            <a href="#inspection">Home Inspection</a>
+            <a href="#services">Specialty Services</a>
             <a href="#reviews">Reviews</a>
             <a href="about.html">About</a>
             <a href="#contact">Schedule</a>
@@ -833,7 +966,7 @@
         <h1>thomas ray burkett jr</h1>
         <div class="unincorporated">unincorporated</div>
         <div class="subtitle">Founder of Home Inspection Detective</div>
-        <div class="tagline">Residential and Commercial Inspections</div>
+        <div class="tagline">Residential and Commercial Inspections across Saguache County, Crestone, Moffat, Alamosa &amp; Salida Area, Colorado</div>
         <a class="phone-hero" href="tel:9706727631">970-672-7631</a>
         <div>
             <a href="#contact" class="cta-btn">Click to Schedule Online</a>
@@ -844,8 +977,107 @@
         ★ $10,000 HONOR GUARANTEE backed by InterNACHI ★
     </div>
 
+    <!-- Main Core Home Inspection Section -->
+    <section id="inspection" class="core-inspection-section">
+        <h2>Core Home Inspection Service</h2>
+        <p class="section-intro-text">
+            A comprehensive, non-invasive visual examination of the physical structure and vital mechanical systems of the home. Backed by InterNACHI Standards of Practice, Tom Burkett provides the methodical clarity and insight you need before buying or selling in Saguache County, Crestone, Moffat, Alamosa, and the Salida area, Colorado.
+        </p>
+
+        <div class="core-grid">
+            <div class="core-card">
+                <div class="core-card-header">
+                    <span class="core-card-icon">🏠</span>
+                    <h3>Roofing &amp; Attic</h3>
+                </div>
+                <p>Thorough assessment of roof coverings, flashing, chimneys, skylights, gutters, drainage, roof framing, attic insulation depth, and proper attic ventilation to prevent heat loss and ice damming.</p>
+            </div>
+
+            <div class="core-card">
+                <div class="core-card-header">
+                    <span class="core-card-icon">🧱</span>
+                    <h3>Foundation &amp; Structure</h3>
+                </div>
+                <p>Inspection of foundation walls, crawl spaces, concrete slabs, floor framing, load-bearing walls, posts, and beams for settlement, water seepage, shifting, or structural deterioration.</p>
+            </div>
+
+            <div class="core-card">
+                <div class="core-card-header">
+                    <span class="core-card-icon">⚡</span>
+                    <h3>Electrical Systems</h3>
+                </div>
+                <p>Examination of the main electrical service panel, breakers and fuses, service entrance conductors, wiring conditions, grounding, and testing of GFCI/AFCI safety devices throughout the home.</p>
+            </div>
+
+            <div class="core-card">
+                <div class="core-card-header">
+                    <span class="core-card-icon">🚰</span>
+                    <h3>Plumbing Systems</h3>
+                </div>
+                <p>Testing interior water supply lines, water pressure, drainage, drain/waste/vent piping, shut-off valves, water heating equipment, functional flow across all fixtures, and active leak detection.</p>
+            </div>
+
+            <div class="core-card">
+                <div class="core-card-header">
+                    <span class="core-card-icon">🔥</span>
+                    <h3>Heating &amp; Cooling (HVAC)</h3>
+                </div>
+                <p>Evaluation of furnaces, boilers, heat pumps, thermostats, ductwork, filters, and safety controls—critical for dependable operation during freezing Colorado winters and high altitude.</p>
+            </div>
+
+            <div class="core-card">
+                <div class="core-card-header">
+                    <span class="core-card-icon">🚪</span>
+                    <h3>Exterior &amp; Grounds</h3>
+                </div>
+                <p>Evaluation of siding, trim, eaves, exterior doors, windows, decks, porches, railings, stairs, walkways, driveways, retaining walls, and soil grading for positive drainage away from the home.</p>
+            </div>
+
+            <div class="core-card">
+                <div class="core-card-header">
+                    <span class="core-card-icon">🪟</span>
+                    <h3>Interior &amp; Living Spaces</h3>
+                </div>
+                <p>Inspection of ceilings, interior walls, floors, doors, stairways, handrails, egress compliance, fireplaces, and installed built-in kitchen appliances.</p>
+            </div>
+
+            <div class="core-card">
+                <div class="core-card-header">
+                    <span class="core-card-icon">🔍</span>
+                    <h3>Thermal &amp; Moisture Screening</h3>
+                </div>
+                <p>Advanced visual detection for draft pathways, thermal bridging, hidden moisture accumulation, and insulation gaps that cause high utility bills in Southern Colorado's alpine climate.</p>
+            </div>
+        </div>
+
+        <!-- Deliverables Banner -->
+        <div class="inspection-deliverables-banner">
+            <div class="deliverable-item">
+                <span class="deliverable-icon">📋</span>
+                <div>
+                    <h4>Fast Digital Delivery</h4>
+                    <p>Easy-to-read, comprehensive report delivered within 24 hours complete with high-resolution photos, concise descriptions, and actionable summaries.</p>
+                </div>
+            </div>
+            <div class="deliverable-item">
+                <span class="deliverable-icon">🤝</span>
+                <div>
+                    <h4>Personal Walk-Through</h4>
+                    <p>Tom walks you through his findings on-site or via thorough phone consultation so you feel 100% confident in your understanding.</p>
+                </div>
+            </div>
+            <div class="deliverable-item">
+                <span class="deliverable-icon">🛡️</span>
+                <div>
+                    <h4>$10,000 Honor Guarantee</h4>
+                    <p>Backed by InterNACHI's exclusive $10,000 Honor Guarantee for complete peace of mind on your biggest investment.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="services" class="services-section">
-        <h2>Additional Services</h2>
+        <h2>Specialty Inspection Services</h2>
         <div class="services-grid">
 
             <!-- Radon Inspection -->
@@ -947,25 +1179,23 @@
 
     <section class="service-areas">
         <div class="service-areas-container">
-            <h2>Areas We Serve in Southern Colorado</h2>
-            <p class="service-areas-intro">Based in the San Luis Valley and serving surrounding communities across the
-                mountains. Whether you are buying a home in town or a cabin off the grid, NOCO Home Inspection Detective
-                is ready to travel to you.</p>
+            <h2>Areas We Serve in Colorado</h2>
+            <p class="service-areas-intro">Serving homeowners, buyers, sellers, and real estate professionals across Saguache County, Crestone, Moffat, Alamosa, the Salida area, and surrounding Colorado mountain communities. Whether you are buying a home in town or a cabin off the grid, NOCO Home Inspection Detective is ready to travel to you.</p>
             <div class="areas-grid">
-                <div class="area-badge">Alamosa</div>
-                <div class="area-badge">Salida</div>
+                <div class="area-badge">Saguache County</div>
                 <div class="area-badge">Crestone</div>
-                <div class="area-badge">Pagosa Springs</div>
+                <div class="area-badge">Moffat</div>
+                <div class="area-badge">Alamosa</div>
+                <div class="area-badge">Salida Area</div>
+                <div class="area-badge">Poncha Springs</div>
+                <div class="area-badge">Villa Grove</div>
+                <div class="area-badge">Center</div>
+                <div class="area-badge">Monte Vista</div>
+                <div class="area-badge">Del Norte</div>
                 <div class="area-badge">South Fork</div>
                 <div class="area-badge">Creede</div>
-                <div class="area-badge">Del Norte</div>
-                <div class="area-badge">Monte Vista</div>
-                <div class="area-badge">Saguache</div>
-                <div class="area-badge">Moffat</div>
-                <div class="area-badge">Mosca</div>
-                <div class="area-badge">Blanca</div>
-                <div class="area-badge">Manassa</div>
-                <div class="area-badge">La Jara</div>
+                <div class="area-badge">Mosca &amp; Blanca</div>
+                <div class="area-badge">San Luis Valley</div>
             </div>
         </div>
     </section>
@@ -1049,11 +1279,16 @@
                         </div>
 
                         <div class="form-group">
+                            <label for="dueDate">Inspection Due Date</label>
+                            <input type="date" id="dueDate" name="dueDate">
+                        </div>
+
+                        <div class="form-group full-width">
                             <label for="service">Inspection Type / Service Needed <span
                                     class="required">*</span></label>
                             <select id="service" name="service" required>
                                 <option value="" disabled selected>Select an inspection service...</option>
-                                <option value="Full Home Inspection">Full Home Inspection</option>
+                                <option value="Full Home Inspection">Full Home Inspection (Core Service)</option>
                                 <option value="Heat Loss & Thermal Imaging">Heat Loss &amp; Thermal Imaging</option>
                                 <option value="Mold / Moisture Testing">Mold / Moisture Testing</option>
                                 <option value="Sewer Scope">Sewer Scope</option>
@@ -1152,6 +1387,7 @@
                     name: (document.getElementById('name').value || '').trim(),
                     phone: (document.getElementById('phone').value || '').trim(),
                     email: (document.getElementById('email').value || '').trim(),
+                    dueDate: (document.getElementById('dueDate').value || '').trim(),
                     service: (document.getElementById('service').value || '').trim(),
                     message: (document.getElementById('message').value || '').trim()
                 };

@@ -16,7 +16,7 @@ export default async function handler(req, res) {
 
         const client = resend || new Resend(process.env.RESEND_API_KEY);
         const body = typeof req.body === 'string' ? JSON.parse(req.body) : (req.body || {});
-        const { name, phone, email, service, message } = body;
+        const { name, phone, email, service, dueDate, message } = body;
 
         if (!name || !phone || !email || !message) {
             return res.status(400).json({ error: 'Missing required fields: name, phone, email, and message are required.' });
@@ -26,11 +26,12 @@ export default async function handler(req, res) {
             from: 'Home Inspection Detective <inspections@yhomeinspectiondetective.com>',
             to: 'tom@yhomeinspectiondetective.com',
             reply_to: email,
-            subject: `New Inspection Request: ${service || 'General'} from ${name}`,
+            subject: `New Inspection Request: ${service || 'General'} from ${name}${dueDate ? ' (Due: ' + dueDate + ')' : ''}`,
             text: `Name: ${name}
 Phone: ${phone}
 Email: ${email}
 Service / Inspection: ${service || 'General'}
+Inspection Due Date: ${dueDate || 'Not specified'}
 
 Property / Project Details:
 ${message}`,
