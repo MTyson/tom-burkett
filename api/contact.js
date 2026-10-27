@@ -25,7 +25,11 @@ export default async function handler(req, res) {
         const { data, error } = await client.emails.send({
             from: 'Home Inspection Detective <inspections@yhomeinspectiondetective.com>',
             to: 'tom@yhomeinspectiondetective.com',
+            replyTo: email,
             reply_to: email,
+            headers: {
+                'Reply-To': email,
+            },
             subject: `New Inspection Request: ${service || 'General'} from ${name}${dueDate ? ' (Due: ' + dueDate + ')' : ''}`,
             text: `Name: ${name}
 Phone: ${phone}
